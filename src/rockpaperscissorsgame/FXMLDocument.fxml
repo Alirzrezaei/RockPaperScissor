@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rockpaperscissorsgame.FXMLDocumentController">
+   <children>
+      <Pane layoutX="2.0" layoutY="100.0" prefHeight="200.0" prefWidth="600.0" style="-fx-border-color: black;">
+         <children>
+            <Pane fx:id="pnHuman" layoutX="99.0" layoutY="20.0" maxHeight="160.0" maxWidth="160.0" minHeight="160.0" minWidth="160.0" prefHeight="160.0" prefWidth="160.0" style="-fx-border-color: black; -fx-border-radius: 15;">
+               <children>
+                  <ImageView fx:id="imgVwHuman" fitHeight="150.0" fitWidth="150.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="pnBot" layoutX="341.0" layoutY="20.0" prefHeight="160.0" prefWidth="160.0" style="-fx-border-color: black; -fx-border-radius: 15;">
+               <children>
+                  <ImageView fx:id="imgVwBot" fitHeight="150.0" fitWidth="150.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+               </children></Pane>
+            <Label alignment="CENTER" layoutX="21.0" layoutY="94.0" prefHeight="30.0" prefWidth="60.0" text="HUMAN" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="519.0" layoutY="94.0" prefHeight="30.0" prefWidth="60.0" text="BOT">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane layoutX="2.0" layoutY="300.0" prefHeight="120.0" prefWidth="600.0">
+         <children>
+            <Pane fx:id="pnRock" layoutX="30.0" layoutY="5.0" onMouseClicked="#pnRockOnMouseClick" prefHeight="110.0" prefWidth="110.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+               <children>
+                  <ImageView fitHeight="108.0" fitWidth="108.0" layoutX="1.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/rock.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pnScissors" layoutX="460.0" layoutY="5.0" onMouseClicked="#PnScissorsOnMouseClick" prefHeight="110.0" prefWidth="110.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+               <children>
+                  <ImageView fitHeight="82.0" fitWidth="107.0" layoutX="2.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/scissors.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pnPaper" layoutX="245.0" layoutY="5.0" onMouseClicked="#pnPaperOnMouseClick" prefHeight="110.0" prefWidth="110.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+               <children>
+                  <ImageView fitHeight="93.0" fitWidth="101.0" layoutX="5.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/paper.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="2.0" layoutY="20.0" prefHeight="80.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="lblBotWins" alignment="CENTER" layoutX="495.0" layoutY="41.0" prefHeight="20.0" prefWidth="80.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblWinner" layoutX="150.0" layoutY="29.0" prefHeight="45.0" prefWidth="300.0">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnReset" layoutX="266.0" layoutY="3.0" mnemonicParsing="false" onMouseClicked="#btnResetOnMouseClick" text="reset" />
+         </children>
+      </Pane>
+      <Label layoutX="495.0" layoutY="33.0" prefHeight="21.0" prefWidth="90.0" text="BOT Wins" />
+      <Label layoutX="35.0" layoutY="33.0" prefHeight="21.0" prefWidth="90.0" text="HUMAN Wins" />
+      <Label fx:id="lblHumanWins" alignment="CENTER" layoutX="35.0" layoutY="64.0" prefHeight="20.0" prefWidth="80.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
